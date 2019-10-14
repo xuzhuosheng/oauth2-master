@@ -1,0 +1,24 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: pro-resource
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:123@localhost:5000/eureka/
+
+#配置oauth2的地址，通过地址进行身份验证，如果设置错误或者不设置，会导致无法验证
+security:
+  oauth2:
+    client:
+      client-id: admin  #授权服务器配置
+      client-secret: 123456  #授权服务器配置
+      access-token-uri: http://localhost:5002/oauth/token
+      user-authorization-uri: http://localhost:5002/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:5002/oauth/chec

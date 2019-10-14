@@ -1,0 +1,13 @@
+server:
+  port: 5003
+
+spring:
+  application:
+    name: con-userservice
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:123@localhost:5000/eureka/

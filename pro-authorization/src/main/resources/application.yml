@@ -1,0 +1,17 @@
+server:
+  port: 5002
+
+spring:
+  application:
+    name: pro-authorization
+  security:
+    user:
+      name: admin
+      password: 123456
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://admin:123@localhost:5000/eureka/
